@@ -1,0 +1,16 @@
+package com.experion.utility;
+
+import com.experion.entity.Account;
+
+public class ProductUtility 
+{
+
+	public static void main(String[] args) 
+	{
+		
+		Account account = new Account("Womens savings account","acc19876",10000);
+		
+		
+	}
+
+}

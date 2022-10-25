@@ -1,0 +1,39 @@
+package com.experion.service;
+
+import com.experion.entity.Account;
+import com.experion.entity.Card;
+import com.experion.entity.Product;
+
+public class Service 
+{
+	public static Product createProduct(String productType) 
+	{
+		//Card card = new Card("product100","Master card ","cards","master");
+		//return card;
+		Product product=null;
+		if(productType.compareTo("cards")== 0)
+		{
+		 product = new Card("product100","Master card ","cards","master");
+		}
+		else if(productType.compareTo("Accounts")== 0)
+		{
+		 product = new Account("product201","Womens Savings Account ","Accounts","Savings");
+		}
+			
+		return product;
+	}
+
+	
+
+	
+
+	public static void displayProductdetails(ArrayList<Product> productList) 
+	{
+		System.out.println("product code" + "	"+"product name"+"	 "+"product type");
+		for(Product product : productList)
+		{
+			System.out.println("Invalid ");
+		}
+	}
+
+}

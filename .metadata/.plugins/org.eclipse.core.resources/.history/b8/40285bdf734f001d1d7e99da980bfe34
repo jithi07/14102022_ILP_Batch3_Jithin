@@ -1,0 +1,28 @@
+package com.experion.entity;
+
+public class Bankservices 
+{
+private String servicecode;
+private String serviceName;
+public Bankservices(String servivecode, String serviceName) {
+	super();
+	this.servivecode = servivecode;
+	this.serviceName = serviceName;
+}
+public String getServivecode() {
+	return servicecode;
+}
+public void setServivecode(String servivecode) {
+	this.servicecode = servivecode;
+}
+public String getServiceName() {
+	return serviceName;
+}
+public void setServiceName(String serviceName) {
+	this.serviceName = serviceName;
+}
+
+
+
+	
+}

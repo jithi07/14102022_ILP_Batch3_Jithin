@@ -1,0 +1,30 @@
+package com.experion.basicprograming;
+
+import java.util.Scanner;
+
+public class Asmnt3 {
+
+	public static void main(String[] args) 
+	{
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter the Limit:");
+		int limit = scanner.nextInt();
+		int valueTracker = 1;
+		int positionTracker = 1;
+		int seriesSum = 0;
+		for (int count = 1; count <= limit; count++) {
+			if (positionTracker % 2 == 0)
+				seriesSum = seriesSum - valueTracker;
+			else
+				seriesSum = seriesSum + valueTracker;
+			valueTracker += 2;
+			positionTracker += 1;
+
+		}
+		System.out.println("Sum of series is:" + seriesSum);
+		
+			}
+}
+
+

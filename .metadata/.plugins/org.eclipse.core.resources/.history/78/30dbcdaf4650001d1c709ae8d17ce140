@@ -1,0 +1,31 @@
+package com.experion.entity;
+
+
+public class Account extends Product
+{
+	
+	private double Balance;
+
+	public Account(String customerId, String customerName, double balance)
+	{
+		super(customerId, customerName);
+		Balance = balance;
+	}
+
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+}

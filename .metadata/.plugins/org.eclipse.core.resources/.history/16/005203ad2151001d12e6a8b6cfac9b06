@@ -1,0 +1,183 @@
+package com.experion.service;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import com.experion.entity.Account;
+import com.experion.entity.Customer;
+import com.experion.entity.Product;
+import com.experion.entity.Service;
+
+public class BankServices 
+{
+	
+ 
+
+public static ArrayList<Service>createService()
+{
+	ArrayList<Service>allServiceList = new ArrayList<Service>();
+	
+	allServiceList.add(new Service("cash deposit"));
+	allServiceList.add(new Service("cheque deposit"));
+	allServiceList.add(new Service("atm withdrawal"));
+	allServiceList.add(new Service("mobile banking"));
+	return allServiceList;
+	
+	
+	}
+
+public static ArrayList<Service>createAccounts()
+{
+
+	ArrayList<Service>allProductList = new ArrayList<Service>();
+	allProductList.add(new Service("Savings Max Account"));
+	allProductList.add(new Service("Current Account"));
+	allProductList.add(new Service("Loan account"));
+	
+	
+	return allProductList;
+
+}
+
+
+public static ArrayList<Product>createProducts(ArrayList<Service>allServiceList)
+{
+	/*ArrayList<Product>productList = new ArrayList<Product>();
+	productList.add(createSavingsMaxAccount(allServiceList,allProductList));
+	productList.add(createCurrentAccount(allServiceList,allProductList));
+	return productList;*/
+	
+	 ArrayList<Product>accountList = new ArrayList<Product>();    
+     Customer customer = null;
+     Scanner scanner = new Scanner(System.in);
+     String customerCode;
+     String customerName;
+     int choice;
+     int mainChoice;
+     
+     
+     System.out.println("Enter the customer code");
+     customerCode = scanner.nextLine();
+     System.out.println("Enter the customer name");
+     customerName = scanner.nextLine();
+     
+     do {
+         System.out.println("1.Savings Max Account");
+         System.out.println("2.Current Account");
+         System.out.println("3.Loan Account");
+         System.out.println("Enter your choice");
+         choice = scanner.nextInt();
+         
+         scanner.nextLine();
+         
+         
+         switch(choice)
+         {
+             case 1: accountList.add(createSavingsMaxAccount(allServiceList));
+                     System.out.println("Savings Max Account created for "+ customerName);
+                     break;
+                     
+            /* case 2: accountList.add(createCurrentAccount(allServiceList));
+                     System.out.println("Current Account created for "+ customerName);
+                     break;
+                     
+             case 3: accountList.add(createLoanAccount(allServiceList));
+                     System.out.println("Loan Account created for "+ customerName);
+                     break;*/
+
+
+
+        }
+         System.out.println("Do you want to continue creating other accounts? (y/n)");
+         mainChoice = scanner.next().charAt(0);            
+     }while (mainChoice == 'y' || mainChoice == 'Y');
+     
+     
+     return accountList;
+     
+ }
+	
+
+
+
+public static Customer createCustomer(ArrayList<Product>allProductList)
+{
+	String customercode;
+	String customername;
+	Scanner scanner = new Scanner(System.in);
+	
+	System.out.println("Enter your customer Id: \n");
+	customercode= scanner.nextLine();
+	System.out.println("Enter your customer Name: \n");
+    customername=scanner.nextLine();
+    Customer customer=new Customer(customercode,customername,allProductList);
+    System.out.println(" Created Sucesfully  for "+customer.getCustomerName());
+
+    return customer;
+}
+
+
+
+
+public static Product createSavingsMaxAccount(ArrayList<Service>allServiceList)
+{
+	ArrayList<Service>savingsServiceList=new ArrayList<Service>();
+	
+	for(Service service : allServiceList)
+	{
+		if((service.getServiceName().compareTo("cash deposit")==0) || (service.getServiceName().compareTo("cheque deposit")==0) || (service.getServiceName().compareTo("atm withdrawal")==0) || (service.getServiceName().compareTo("mobile banking")==0) )
+		{
+			savingsServiceList.add(service);
+		}
+	}
+	Product product = new Account("SMA100", "Savings Max Account",savingsServiceList,10000);
+	
+		
+	return product;
+		
+}
+public static Product createCurrentAccount(ArrayList<Service>allServiceList)
+{
+	ArrayList<Service>currentServiceList=new ArrayList<Service>();
+	
+    
+    	for(Service service : allServiceList)
+	{
+		if((service.getServiceName().compareTo("cash deposit")==0) || (service.getServiceName().compareTo("cheque deposit")==0) || (service.getServiceName().compareTo("atm withdrawal")==0) || (service.getServiceName().compareTo("mobile banking")==0) )
+		{
+			currentServiceList.add(service);
+		}
+	}
+	Product product = new Account("CA100", "Current Account",currentServiceList,10000);
+	return product;
+		
+}
+
+public static Product createLoanAccount(ArrayList<Service>allServiceList)
+{
+	ArrayList<Service>currentServiceList=new ArrayList<Service>();
+	
+    
+    	for(Service service : allServiceList)
+	{
+		if((service.getServiceName().compareTo("cash deposit")==0) || (service.getServiceName().compareTo("cheque deposit")==0) )
+		{
+			currentServiceList.add(service);
+		}
+	}
+	Product product = new Account("LA100", "Current Account",currentServiceList,10000);
+	return product;
+		
+}
+	
+
+
+public static void displayCustomer(Customer customer) {
+	for(Product product:customer.getAccountList())
+	{
+		System.out.println(customer.getCustomerId()+"   Created A"+product.getProductName());
+	}
+	
+}  
+}
+

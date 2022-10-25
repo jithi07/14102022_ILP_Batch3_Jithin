@@ -1,0 +1,54 @@
+package com.experion.basicprograming;
+
+import java.util.Scanner;
+
+public class Asmnt1 {
+
+	public static void main(String[] args) 
+	{
+		
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("Enter three numbers:");
+		int number1=scanner.nextInt();
+		int number2=scanner.nextInt();
+		int number3=scanner.nextInt();
+
+		System.out.println("The Numbers Before sorting are :\n");
+		System.out.println(number1 + "\t" + number2 + "\t" + number3);
+		System.out.println("The Numbers After  sorting are :\n");
+		if (number1 > number2 && number1 > number3) 
+		{
+			if (number2 > number3) 
+			{
+				System.out.println("Numbers in Decentorder"+number1+"\t"+number2+"\t"+number3);
+			} 
+			else  
+			{
+				
+			}
+		} else if (numberTwo > numberOne && numberTwo > numberThree) {// checking if 2nd number is greater than the rest
+			if (numberOne > numberThree) {
+				greatOne = numberTwo;
+				greatTwo = numberOne;
+				greatThree = numberThree;
+			} else if (numberThree > numberOne) {
+				greatOne = numberTwo;
+				greatTwo = numberThree;
+				greatThree = numberOne;
+			}
+		} else if (numberThree > numberOne && numberThree > numberTwo) {// checking if 3rd number is greater than the
+																		// rest
+			if (numberOne > numberTwo) {
+				greatOne = numberThree;
+				greatTwo = numberOne;
+				greatThree = numberTwo;
+			} else if (numberTwo > numberOne) {
+				greatOne = numberThree;
+				greatTwo = numberTwo;
+				greatThree = numberOne;
+			}
+		}
+
+
+}
+}

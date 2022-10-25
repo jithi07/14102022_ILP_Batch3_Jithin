@@ -1,0 +1,33 @@
+package com.experion.entity;
+
+public abstract class Product 
+{
+	public static String customerId;
+	String customerName;
+	
+	public Product(String customerId, String customerName) {
+		super();
+		CustomerDetails.customerId = customerId;
+		this.customerName = customerName;
+	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		CustomerDetails.customerId = customerId;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+		
+	
+
+}

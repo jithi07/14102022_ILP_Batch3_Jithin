@@ -1,0 +1,24 @@
+package com.experion.service;
+
+import com.experion.entity.Account;
+import com.experion.entity.Product;
+public class Service 
+{
+	
+	public static boolean search(String customerId)
+	{
+		 if (customerId.equals(Product.customerId)) {
+	       
+	            return (true);
+	        }
+	        return (false);
+		
+	}
+	
+	
+	
+	
+
+
+
+}

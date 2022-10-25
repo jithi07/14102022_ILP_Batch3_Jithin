@@ -1,0 +1,17 @@
+package com.experion.entity;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Product 
+{
+
+	String customer_id;
+	String customer_name;
+	ArrayList<Product>accountype=new ArrayList<Product>();
+	
+
+	
+	
+
+}

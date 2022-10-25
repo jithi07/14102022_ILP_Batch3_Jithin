@@ -1,0 +1,29 @@
+package com.experion.entity;
+
+import com.experion.service.CardAccountService;
+
+public class Account extends Product
+{
+	
+	private String accountNumber;
+	private double accountBalance;
+	private String accountType;
+	public Account(String customerId, String customerName, String accountType, String accountNumber,
+			double accountBalance, String accountType2) {
+		super(customerId, customerName, accountType);
+		this.accountNumber = accountNumber;
+		this.accountBalance = accountBalance;
+		this.accountType = accountType2;
+		
+	}
+	
+	
+	
+	
+	
+
+	
+	
+	
+
+}

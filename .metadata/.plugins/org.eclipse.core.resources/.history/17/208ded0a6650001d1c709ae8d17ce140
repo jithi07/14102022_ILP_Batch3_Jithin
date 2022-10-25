@@ -1,0 +1,39 @@
+package com.experion.entity;
+
+
+public class SavingsAccount extends CustomerDetails
+{
+	
+	private double balance;
+
+	public SavingsAccount(String customerId, String customerName, double balance)
+	{
+		super(customerId, customerName);
+		this.balance = balance;
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = balance;
+	}
+
+	
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+	
+	
+

@@ -1,0 +1,20 @@
+package com.experion.entity;
+
+import java.util.ArrayList;
+
+public class Product {
+
+	public static void main(String[] args) 
+	{
+		
+		String productCode;
+		String productName;
+		ArrayList<Service>serviceList=new ArrayList<Service>();
+		
+		
+		
+		
+
+	}
+
+}
