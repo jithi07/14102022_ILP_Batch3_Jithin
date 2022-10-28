@@ -2,10 +2,18 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="com.experion.entity.Bankservices"/>
-    <fullyQualifiedTypeName name="com.experion.service.Service"/>
     <fullyQualifiedTypeName name="com.experion.entity.Loan"/>
     <fullyQualifiedTypeName name="com.experion.entity.Card"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="com.experion.entity.Customer"/>
+    <fullyQualifiedTypeName name="java.sql.Date"/>
+    <fullyQualifiedTypeName name="com.bank.service.BankService"/>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="com.bank.entity.Rate"/>
     <fullyQualifiedTypeName name="com.bank.entity.Service"/>
+    <fullyQualifiedTypeName name="com.experion.entity.Address"/>
+    <fullyQualifiedTypeName name="com.experion.entity.Employee"/>
+    <fullyQualifiedTypeName name="java.security.Provider.Service"/>
+    <fullyQualifiedTypeName name="com.experion.service.Service"/>
 </qualifiedTypeNameHistroy>
